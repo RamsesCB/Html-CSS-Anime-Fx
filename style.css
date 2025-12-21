@@ -1,0 +1,340 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0;
+    /* background: linear-gradient(to top, black, gray); */
+    background-color: rgb(23, 25, 27);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+#Titulo h1 {
+    box-sizing: border-box;
+    color: rgb(215, 215, 215);
+    font-size: 25vw;
+    text-align: center;
+    padding-bottom: 10px;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
+    line-height: 0.8;
+    text-shadow: black 10px 10px;
+    animation: entrada-titulo 2s ease-out forwards;
+}
+@keyframes entrada-titulo {
+    from {
+        opacity: 0;
+        transform: translate(0%, -20%);
+    }    
+    to{
+        opacity: 1;
+        transform: translate(0%, 0%);
+    }
+}
+
+header {
+    background: url("Fondo_pag_anime.jpg") center/cover no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+nav {
+    color: white;
+}
+
+#secciones ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 15px;
+    font-size: 22px;
+    font-family: "Sans-serif";
+}
+
+#secciones ul {
+    box-sizing: border-box;
+    border-radius: 30px;
+    background: rgba(93, 92, 92, 0.364);
+    backdrop-filter: blur(10px);
+    width: 370px;
+    height: 40px;
+    line-height: 15px;
+    padding: 0px;
+    text-align: center;
+    display: inline-block;
+    animation-name: scale_top;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+@keyframes scale_top {
+    0%{
+        transform: scale(0.2);
+    }
+}
+#secciones h5 {
+    height: 40px;
+}
+
+#secciones h6 {
+    font-size: 10px;
+    color: black;
+    height: 90px;
+}
+
+#secciones ul li a {
+    text-decoration: none;
+    color: rgb(235, 225, 225);
+    position: relative;
+}
+
+#secciones ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease-out;
+}
+
+#secciones ul li a:hover::after {
+    width: 100%;
+}
+
+header p {
+    box-sizing: border-box;
+    text-align: center;
+    margin-left: 15%;
+    color: white;
+    width: 20%;
+    padding-bottom: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 5px;
+    
+}
+
+.Personaje-flotante {
+    position: absolute;
+    z-index: 10;
+    top: 55%;
+    left: 51.5%;
+    transform: translate(-50%, -50%);
+    height: 90vh;
+    width: auto;
+    animation: entrada-epica 2.2s ease-out forwards;
+    
+    
+}
+
+@keyframes entrada-epica {
+    from {
+        opacity: 0.7;
+        filter: blur(20px) drop-shadow(0 0 0 rgba(0,0,0,0));
+        transform: translate(-50%, -40%);
+    }    
+    to{
+        opacity: 1;
+        filter: blur(0) drop-shadow(0 0 10px rgba(198, 1, 1, 0.936));
+        transform: translate(-50%, -50%);
+        
+    }
+}
+
+#contet h1{
+    box-sizing: border-box;
+    color: white;
+    font-size: 80px;
+    font-family: "Comic Sans MS";
+    padding: 5px;
+    text-shadow: 5px 5px  25px rgb(0, 0, 0);
+    animation: aparecer-izquierda 5s cubic-bezier(0.30, 1, 0.30,1) forwards;
+}
+@keyframes aparecer-izquierda {
+    0%{
+        opacity: 0;
+        transform: translate(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+        clip-path: inset(0 0 0 0);
+    }
+    
+}
+#contet h3{
+    box-sizing: border-box;
+    color: white;
+    font-size: 30px;
+    font-family: "Comic Sans MS";
+    padding: 0px;
+    line-height: 0px;
+}
+
+#Bloque_espacio{
+    box-sizing: border-box;
+    width: 450px;
+    height: 270px;
+    /* border: 3px solid white; */
+    font-size: 60px;
+    font-family: "Comic Sans MS";
+    color: white;
+    padding-top: 150px;
+}
+#Bloque_espacio2{
+    width: 10px;
+    height: 10px;
+    /* border: 3px solid white; */
+}
+
+#Bloque_espacio3{
+    width: 100px;
+    height: 100px;
+    /* border: 3px solid white; */
+}
+
+.carousel {
+    margin: 50px auto 20px auto;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+}
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 20s infinite linear;
+    padding-right: 1em;
+}
+.card {
+    flex: 0 0 5em;
+    height: 5em;
+    padding: 1em;
+    background: beige;
+    font-size: 3rem;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+}
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
+.carousel2 {
+    margin: 0px auto 50px auto;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+}
+.carousel2::-webkit-scrollbar{
+    display: none;
+}
+.group2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin2 20s infinite linear;
+    padding-left: 1em;
+}
+.card2 {
+    flex: 0 0 5em;
+    height: 5em;
+    padding: 1em;
+    background: beige;
+    font-size: 3rem;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+    overflow: hidden;
+    
+}
+@keyframes spin2 {
+    from {translate: -100%;}
+    to {translate: 0;}
+}
+
+.card2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    display: block;
+    border-radius: .2em;
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: .2em;
+}
+.Container_tarjetas {
+    width: 100%;
+    display: flex;
+    max-width: 970px;
+    margin: 0 auto;
+    justify-content: center;
+}
+.Tarjetas {
+    width: 100%;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background:  rgb(10, 11, 11);
+    /* box-shadow: 0px 4px  4px rgba(216, 43, 255, 1); */
+    box-shadow: 0px 5px  4px rgb(255, 43, 43);
+    cursor: default;
+    transition: all 400ms ease;
+    
+}
+.Tarjetas:hover{
+    /* box-shadow: 0px 7px  20px rgba(216, 43, 255, 0.613); */
+    box-shadow: 10px 10px  20px rgba(255, 43, 43, 0.613);
+    transform: translateY(-5%);
+}
+.Tarjetas img{
+    width: 100%;
+    height: 250px;
+
+}
+.Tarjetas .Contenido {
+    box-sizing: border-box;
+    padding: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+.Tarjetas .Contenido p {
+    box-sizing: border-box;
+    line-height: 100%;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+.Tarjetas .Contenido a {
+    box-sizing: border-box;
+    list-style: none;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    border-radius: 50px;
+    background-color: gainsboro;
+    font-family: "Comit Sans MS";
+    padding-top: 3px;
+    font-size: 15px;
+}
